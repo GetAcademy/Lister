@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+    <script src="controller.js"></script>
+
+    <script>
+        // dummy view
+        function updateView() { }
+
+        // model
+        let numbers;
+        let numbersInput;
+
+        QUnit.test('test pop', function (assert) {
+            numbers = [1, 2, 3];
+            pop();
+            assert.deepEqual(numbers, [1, 2]);
+        });
+
+        QUnit.test('test unshift', function (assert) {
+            numberInput = 4;
+            numbers = [1, 2, 3];
+            unshift();
+            assert.deepEqual(numbers, [4, 1, 2, 3]);
+        });
+    </script>
+</body>
